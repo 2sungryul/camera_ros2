@@ -1,5 +1,5 @@
 # camera_ros2
 
-publisher -> jetson nano
+ROS2 camera test package 
 
-subscriber -> WSL2 on PC
+image publisher on jetson nano & image subscriber on WSL2

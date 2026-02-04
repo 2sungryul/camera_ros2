@@ -1,15 +1,22 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/compressed_image.hpp"
-#include "cv_bridge/cv_bridge.h"
+#include "cv_bridge/cv_bridge.hpp"
 #include "opencv2/opencv.hpp"
 #include <memory>
 #include <chrono>
 
-std::string src = "nvarguscamerasrc sensor-id=0 ! \
+// jetson nano
+/*std::string src = "nvarguscamerasrc sensor-id=0 ! \
 	video/x-raw(memory:NVMM), width=(int)640, height=(int)360, \
     format=(string)NV12 ! nvvidconv flip-method=0 ! video/x-raw, \
     width=(int)640, height=(int)360, format=(string)BGRx ! \
-	videoconvert ! video/x-raw, format=(string)BGR ! appsink"; 
+	videoconvert ! video/x-raw, format=(string)BGR ! appsink"; */
+
+// raspberry pi5
+std::string src = "libcamerasrc ! \
+	video/x-raw,format=YUY2,width=640,height=480,framerate=30/1 ! \
+    queue ! videoconvert ! videoflip method=rotate-180 ! \
+    videoconvert ! video/x-raw, format=(string)BGR ! appsink";
 
 int main(int argc, char * argv[])
 {

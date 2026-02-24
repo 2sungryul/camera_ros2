@@ -1,5 +1,29 @@
 # camera_ros2
 
-ROS2 camera test package 
+# 확인사항
+- RaspberryPi5 보드와 WSL2가 같은 네트워크에 연결되어 있는지?
+- RaspberryPi5 보드와 WSL2의 환경변수 ROS_DOMAIN_ID가 자기 로봇번호와 동일한지?
 
-image publisher on jetson nano & image subscriber on WSL2
+# RaspberryPi5-ubuntu24.04에서 패키지실행
+
+```bash
+$ cd ~/ros2_ws/src
+$ git clone https://github.com/2sungryul/camera_ros2.git
+$ ls # camera_ros2 생성확인
+$ cd ~/ros2_ws
+$ colcon build --symlink-install --packages-select camera_ros2
+$ source install/local_setup.bash
+$ ros2 run camera_ros2 pub
+```
+# Wsl2-ubuntu24.04에서 패키지실행
+
+```bash
+$ cd ~/ros2_ws/src
+$ git clone https://github.com/2sungryul/camera_ros2.git
+$ ls # camera_ros2 생성확인
+$ cd ~/ros2_ws
+$ colcon build --symlink-install --packages-select camera_ros2
+$ source install/local_setup.bash
+$ ros2 run camera_ros2 sub
+```
+

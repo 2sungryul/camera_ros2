@@ -10,7 +10,7 @@ $ ifconfig #ip주소의 앞3자리가 같아야함
 $ echo $ROS_DOMAIN_ID
 ```
 
-# RaspberryPi5-ubuntu24.04에서 패키지실행
+# RaspberryPi5-ubuntu24.04에서 패키지 설치 및 실행
 
 ```bash
 $ cd ~/ros2_ws/src
@@ -21,7 +21,7 @@ $ colcon build --symlink-install --packages-select camera_ros2
 $ source install/local_setup.bash
 $ ros2 run camera_ros2 pub
 ```
-# Wsl2-ubuntu24.04에서 패키지실행
+# Wsl2-ubuntu24.04에서 패키지 설치 및 실행
 
 ```bash
 $ cd ~/ros2_ws/src

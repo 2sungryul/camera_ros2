@@ -9,7 +9,14 @@ $ ifconfig #ip주소의 앞3자리가 같아야함
 ```bash
 $ echo $ROS_DOMAIN_ID
 ```
-
+```bash
+$ sudo apt update
+$ sudo apt install ros-jazzy-cv-bridge
+```
+```bash
+$ sudo apt update
+$ sudo apt install libopencv-dev
+```
 # RaspberryPi5-ubuntu24.04에서 패키지 설치 및 실행
 
 ```bash

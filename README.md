@@ -9,10 +9,12 @@ $ ifconfig #ip주소의 앞3자리가 같아야함
 ```bash
 $ echo $ROS_DOMAIN_ID
 ```
+- ubuntu24.04에 cv_bridge 패키지를 설치
 ```bash
 $ sudo apt update
 $ sudo apt install ros-jazzy-cv-bridge
 ```
+- ubuntu24.04에 C++ opencv 패키지를 설치
 ```bash
 $ sudo apt update
 $ sudo apt install libopencv-dev
